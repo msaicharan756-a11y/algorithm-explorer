@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algorithm Explorer - Smart Backpack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>⚡ Algorithm Explorer</h1><p>Smart Backpack Problem Solver</p></header>
+<main>
+<section class="card">
+<h2>About the Problem</h2>
+<p>The Smart Backpack (0/1 Knapsack) problem asks us to choose items with the highest total value without exceeding a backpack's weight capacity. It is useful in cargo loading, packing and resource allocation.</p>
+</section>
+<section class="card">
+<h2>Enter Your Data</h2>
+<label>Backpack capacity <input id="capacity" type="number" min="1" max="1000" value="10"></label>
+<h3>Items (name, weight, value)</h3>
+<div id="items">
+<div class="item"><input placeholder="Name" value="Laptop"><input type="number" placeholder="Weight" value="3"><input type="number" placeholder="Value" value="9"><button class="remove">×</button></div>
+<div class="item"><input placeholder="Name" value="Book"><input type="number" placeholder="Weight" value="2"><input type="number" placeholder="Value" value="6"><button class="remove">×</button></div>
+<div class="item"><input placeholder="Name" value="Headphones"><input type="number" placeholder="Weight" value="1"><input type="number" placeholder="Value" value="5"><button class="remove">×</button></div>
+<div class="item"><input placeholder="Name" value="Camera"><input type="number" placeholder="Weight" value="4"><input type="number" placeholder="Value" value="10"><button class="remove">×</button></div>
+<div class="item"><input placeholder="Name" value="Bottle"><input type="number" placeholder="Weight" value="2"><input type="number" placeholder="Value" value="4"><button class="remove">×</button></div>
+</div>
+<button id="add">+ Add item</button> <button id="solve">Compare all algorithms</button>
+<p id="error" role="alert"></p>
+</section>
+<section class="card">
+<h2>Algorithm Results</h2>
+<div class="tabs">
+<button data-tab="brute">Brute Force</button><button data-tab="greedy">Greedy</button>
+<button data-tab="dp">Dynamic Programming</button><button data-tab="backtrack">Backtracking</button>
+</div>
+<div id="output">Enter your items and click Compare all algorithms.</div>
+</section>
+<section class="card">
+<h2>Complexity Comparison</h2>
+<table><tr><th>Algorithm</th><th>Time complexity</th><th>Optimal?</th></tr>
+<tr><td>Brute Force</td><td>O(n × 2ⁿ)</td><td>Yes</td></tr>
+<tr><td>Greedy</td><td>O(n log n)</td><td>Not always</td></tr>
+<tr><td>Dynamic Programming</td><td>O(n × W)</td><td>Yes</td></tr>
+<tr><td>Backtracking</td><td>O(2ⁿ) worst case</td><td>Yes</td></tr></table>
+<p class="note">n = number of items; W = backpack capacity.</p>
+</section>
+</main>
+<footer>Algorithm Explorer | HTML, CSS and JavaScript</footer>
+<script src="script.js"></script>
+</body></html>
